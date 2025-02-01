@@ -1,10 +1,10 @@
 import 'package:equatable/equatable.dart';
 
 class Contact extends Equatable {
-  String name;
-  String number;
+ final String name;
+ final String number;
 
-  Contact({
+const  Contact({
     required this.name,
     required this.number,
   });

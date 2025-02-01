@@ -1,10 +1,10 @@
 part of 'contact_bloc.dart';
 
 sealed class ContactState extends Equatable {
-  List<Contact> contactList;
-  Contact contactItem;
+ final List<Contact> contactList;
+ final Contact contactItem;
 
-  ContactState({
+ const ContactState({
     required this.contactList,
     required this.contactItem,
   });
@@ -14,7 +14,7 @@ sealed class ContactState extends Equatable {
 }
 
 final class ContactInitial extends ContactState {
-  ContactInitial({required super.contactList, required super.contactItem});
+ const ContactInitial({required super.contactList, required super.contactItem});
 
 
 }

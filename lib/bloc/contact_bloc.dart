@@ -1,7 +1,7 @@
 
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:contact_list/Contact.dart';
+import 'package:contact_list/contact.dart';
 
 part 'contact_event.dart';
 part 'contact_state.dart';

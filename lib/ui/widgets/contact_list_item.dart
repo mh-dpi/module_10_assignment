@@ -12,7 +12,7 @@ class ContactListItem extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.fromLTRB(0, 5, 0, 0),
       child: Container(
-        color: Colors.grey.withOpacity(0.30),
+        color: Colors.grey.withValues(alpha: 0.3),
         child: ListTile(
           title: Text(
             state.contactList[index].name,
