@@ -1,16 +1,6 @@
-# contact_list
+# মডিউল ১০ এর এসাইনমেন্ট
 
-A new Flutter project.
+![UI](ss.png)
 
-## Getting Started
+## Implement this UI by flutter code. There are 2 input fields where one can take the name and other can take the number. When pressing on the ‘add’ button your data has to show in a list tile just like the picture. Also add a confirmation dialogue for deletion when pressing a long tap on the list. 
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
