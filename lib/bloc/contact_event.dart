@@ -7,25 +7,19 @@ sealed class ContactEvent extends Equatable {
   List<Object> get props => [];
 }
 
-class ContactNameOnChangeEvent extends ContactEvent {
-  final String value;
 
-  const ContactNameOnChangeEvent(this.value);
+class ContactAddEvent extends ContactEvent {
+  final TextEditingController name;
+  final TextEditingController number;
 
-  @override
-  List<Object> get props => [value];
-}
-
-class ContactNumberOnChangeEvent extends ContactEvent {
-  final String value;
-
-  const ContactNumberOnChangeEvent(this.value);
+  const ContactAddEvent({
+    required this.name,
+    required this.number,
+  });
 
   @override
-  List<Object> get props => [value];
+  List<Object> get props => [name, number];
 }
-
-class ContactAddEvent extends ContactEvent {}
 
 class ContactDeleteEvent extends ContactEvent {
   final int index;

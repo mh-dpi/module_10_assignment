@@ -29,6 +29,4 @@ class HomeActivity extends StatelessWidget {
       ),
     );
   }
-
-
 }
