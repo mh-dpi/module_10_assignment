@@ -12,7 +12,15 @@ class ContactListView extends StatelessWidget {
       child: BlocBuilder<ContactBloc, ContactState>(
         builder: (context, state) {
           if (state.contactList.isEmpty) {
-            return Center(child: Text('No contacts available.'));
+            return Center(
+                child: Text(
+              'No contacts available.',
+              style: TextStyle(
+                fontSize: 30,
+                fontWeight: FontWeight.w700,
+                color: Colors.blue,
+              ),
+            ));
           }
 
           return ListView.builder(

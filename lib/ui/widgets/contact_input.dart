@@ -1,22 +1,20 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../bloc/contact_bloc.dart';
 import '../../style.dart';
 
-
 class ContactInput extends StatelessWidget {
   const ContactInput({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final TextEditingController nameController = TextEditingController();
+    final TextEditingController numberController = TextEditingController();
     return Column(
       children: [
-         TextField(
-           onChanged: (value) {
-             context.read<ContactBloc>().add(ContactNameOnChangeEvent(value));
-           },
+        TextField(
+          controller: nameController,
           decoration: inputDecoration(
             fieldName: "Name",
           ),
@@ -24,18 +22,20 @@ class ContactInput extends StatelessWidget {
         const SizedBox(
           height: 20,
         ),
-         TextField(
-           onChanged: (value) {
-             context.read<ContactBloc>().add(ContactNumberOnChangeEvent(value));
-           },
+        TextField(
+          controller: numberController,
+          keyboardType: TextInputType.phone,
           decoration: inputDecoration(fieldName: "Number"),
         ),
         const SizedBox(
           height: 20,
         ),
         GestureDetector(
-          onTap: (){
-            context.read<ContactBloc>().add(ContactAddEvent());
+          onTap: () {
+            context.read<ContactBloc>().add(ContactAddEvent(
+                  name: nameController,
+                  number: numberController,
+                ));
           },
           child: Container(
             decoration: BoxDecoration(
