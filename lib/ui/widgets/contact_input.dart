@@ -28,6 +28,7 @@ class ContactInput extends StatelessWidget {
            onChanged: (value) {
              context.read<ContactBloc>().add(ContactNumberOnChangeEvent(value));
            },
+           keyboardType: TextInputType.phone,
           decoration: inputDecoration(fieldName: "Number"),
         ),
         const SizedBox(
